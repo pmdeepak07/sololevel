@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a2b3c;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #0a1f33;
+    border: 2px solid #4b5b6b;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.info, .stats {
+    margin-bottom: 20px;
+}
+
+.info p, .stats p {
+    margin: 5px 0;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #4b5b6b;
+    margin: 10px 0;
+}
+
+.quests {
+    background-color: #1a2b3c;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.quests h2 {
+    text-align: center;
+    border-bottom: 2px solid #4b5b6b;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+.quests ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quests li {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    background-color: #4b5b6b;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6b7b8b;
+}
+
+.add-quest {
+    display: flex;
+    margin-top: 10px;
+}
+
+.add-quest input {
+    flex-grow: 1;
+    padding: 5px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #4b5b6b;
+    outline: none;
+}
+
+.add-quest button {
+    border-radius: 0 5px 5px 0;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #0a1f33;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #4b5b6b;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.modal-content h2 {
+    color: #ffffff;
+}
+
+.modal-content button {
+    margin: 10px;
+}
+
+.close {
+    color: #ffffff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbbbbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button.animate {
+    animation: buttonAnimation 0.5s ease-in-out;
+}
+
+@keyframes buttonAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}

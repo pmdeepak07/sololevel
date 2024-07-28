@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo Leveling Interface</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="info">
+            <p>NAME: <span id="name">SUNG JIN-WOO</span></p>
+            <p>LEVEL: <span id="level">1</span></p>
+            <p>JOB: <span id="job">NONE</span></p>
+            <p>FATIGUE: <span id="fatigue">0</span></p>
+            <p>TITLE: <span id="title">NONE</span></p>
+            <p>HP: <span id="hp">100</span></p>
+            <hr>
+            <p>MP: <span id="mp">10</span></p>
+        </div>
+        <div class="stats">
+            <p>STRENGTH: <span id="strength">1</span></p>
+            <p>VITALITY: <span id="vitality">1</span></p>
+            <p>AGILITY: <span id="agility">1</span></p>
+            <p>INTELLIGENCE: <span id="intelligence">1</span></p>
+            <p>SENSE: <span id="sense">1</span></p>
+        </div>
+        <div class="quests">
+            <h2>Daily Tasks</h2>
+            <ul id="daily-task-list">
+                <li id="daily1"><span>Train for 1 hour</span> - <button onclick="completeQuest('daily1', 'daily')">Complete</button> <button onclick="deleteTask('daily1', 'daily')">Delete</button></li>
+                <li id="daily2"><span>Gather 10 herbs</span> - <button onclick="completeQuest('daily2', 'daily')">Complete</button> <button onclick="deleteTask('daily2', 'daily')">Delete</button></li>
+                <li id="daily3"><span>Run 5 kilometers</span> - <button onclick="completeQuest('daily3', 'daily')">Complete</button> <button onclick="deleteTask('daily3', 'daily')">Delete</button></li>
+            </ul>
+            <div class="add-quest">
+                <input type="text" id="new-daily-task-input" placeholder="New Daily Task">
+                <button onclick="addDailyTask()">Add Daily Task</button>
+            </div>
+        </div>
+        <div class="quests">
+            <h2>Main Quests</h2>
+            <ul id="main-quest-list">
+                <li id="quest1"><span>Defeat 10 goblins</span> - <button onclick="completeQuest('quest1', 'main')">Complete</button> <button onclick="deleteTask('quest1', 'main')">Delete</button></li>
+                <li id="quest2"><span>Collect 5 herbs</span> - <button onclick="completeQuest('quest2', 'main')">Complete</button> <button onclick="deleteTask('quest2', 'main')">Delete</button></li>
+                <li id="quest3"><span>Find the hidden cave</span> - <button onclick="completeQuest('quest3', 'main')">Complete</button> <button onclick="deleteTask('quest3', 'main')">Delete</button></li>
+            </ul>
+            <div class="add-quest">
+                <input type="text" id="new-main-quest-input" placeholder="New Main Quest">
+                <button onclick="addMainQuest()">Add Main Quest</button>
+            </div>
+        </div>
+        <div id="stat-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Choose a stat to increase</h2>
+                <button onclick="increaseStat('strength')">Strength</button>
+                <button onclick="increaseStat('vitality')">Vitality</button>
+                <button onclick="increaseStat('agility')">Agility</button>
+                <button onclick="increaseStat('intelligence')">Intelligence</button>
+                <button onclick="increaseStat('sense')">Sense</button>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
